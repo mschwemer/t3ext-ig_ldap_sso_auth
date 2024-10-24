@@ -46,6 +46,8 @@ class IconFactory
         ?string $iconName
     ): string
     {
+        $iconName = '';
+        
         if (!empty($row)
             && in_array($table, ['be_groups', 'be_users', 'fe_groups', 'fe_users'], true)) {
             if ($row['uid'] ?? false) {
